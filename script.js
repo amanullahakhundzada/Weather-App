@@ -1,3 +1,4 @@
+//https://api.openweathermap.org/data/2.5/weather?q=fountain valley & units=imperial&appid=6231125811f72919410760adeaba69dc
 let weather = {
     apiKey: "6231125811f72919410760adeaba69dc",
     fetchWeather: function (city) {
@@ -29,10 +30,10 @@ let weather = {
       document.querySelector(".humidity").innerText =
         "Humidity: " + humidity + "%";
       document.querySelector(".wind").innerText =
-        "Wind speed: " + speed + " m/h";
+        "Wind speed: " + speed + " mph";
       document.querySelector(".weather").classList.remove("loading");
       document.body.style.backgroundImage =
-        "url('https://source.unsplash.com/1600x900/?" + name + "')";
+        "url('https://source.unsplash.com/2300x1600/?" + name + "')";
     },
     search: function () {
       this.fetchWeather(document.querySelector(".search-bar").value);
@@ -51,4 +52,4 @@ let weather = {
       }
     });
   
-  weather.fetchWeather("California");
+  weather.fetchWeather("Fountain Valley");
