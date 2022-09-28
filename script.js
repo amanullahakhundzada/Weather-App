@@ -18,11 +18,14 @@ let weather = {
         .then((data) => this.displayWeather(data));
     },
     displayWeather: function (data) {
-      const { name } = data;
+     
+      const { name,timezone } = data;
+      const {country} =data.sys;
       const { icon, description } = data.weather[0];
-      const { temp, humidity } = data.main;
+      const { temp, humidity,temp_min,temp_max,feels_like} = data.main;
       const { speed } = data.wind;
-      document.querySelector(".city").innerText = "Weather in " + name;
+      document.querySelector(".city").innerText = "Weather in " + name+" "+ country;
+      document.querySelector(".feels").innerText="Low: "+temp_min+" °F \n High: " +temp_max + " °F\n Feels like: "+feels_like+" °F";
       document.querySelector(".icon").src =
         "https://openweathermap.org/img/wn/" + icon + ".png";
       document.querySelector(".description").innerText = description;
