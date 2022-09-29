@@ -12,7 +12,7 @@ body {
   
   .card {
     background: #000000d0;
-    color: white;
+    color: orange;
     padding: 2em;
     border-radius: 30px;
     width: 100%;
@@ -24,6 +24,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: orange;
   }
   
   button {
@@ -34,7 +35,7 @@ body {
     width: 44px;
     outline: none;
     background: #7c7c7c2b;
-    color: white;
+    color:orange;
     cursor: pointer;
     transition: 0.2s ease-in-out;
   }
@@ -45,7 +46,7 @@ body {
     padding: 0.4em 1em;
     border-radius: 24px;
     background: #7c7c7c2b;
-    color: white;
+    color: orange;
     font-family: inherit;
     font-size: 105%;
     width: calc(100% - 100px);
@@ -84,3 +85,4 @@ body {
     top: 0;
     left: 20px;
   }
+ 
